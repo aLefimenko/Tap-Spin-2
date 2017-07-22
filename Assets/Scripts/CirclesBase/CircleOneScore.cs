@@ -8,6 +8,7 @@ using System.Collections;
 class CircleOneScore : CircleBase
 {
     private Coroutine coroutineForCircleScore;
+    private Vector3 randCreat;
 
     void Start()
     {
@@ -22,7 +23,8 @@ class CircleOneScore : CircleBase
     IEnumerator Create()
     {
         yield return new WaitForSeconds(1f);
-        GameObject objectcircle = Instantiate(prefabObject, prefabObject.transform.position, Quaternion.identity);
+        randCreat = new Vector3(UnityEngine.Random.Range(-2f, 2f), prefabObject.transform.position.y, prefabObject.transform.position.z);
+        GameObject objectcircle = Instantiate(prefabObject, randCreat, Quaternion.identity);
         objectcircle.GetComponent<Rigidbody2D>().gravityScale = mass;
         objectcircle.AddComponent<ScoreScript>();
         mass += 0.05f;
