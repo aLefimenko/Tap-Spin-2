@@ -8,6 +8,12 @@ using UnityEngine;
 class DeathCircle : CircleBase
 {
     private Coroutine coroutineForInst;
+    
+    void Start()
+    {
+        mass = 0;
+        type = "death";
+    }
 
     protected override void CreateObj()
     {
