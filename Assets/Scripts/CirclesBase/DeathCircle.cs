@@ -11,7 +11,7 @@ class DeathCircle : CircleBase
     
     void Start()
     {
-        mass = 0;
+        mass = 1;
         type = "death";
     }
 

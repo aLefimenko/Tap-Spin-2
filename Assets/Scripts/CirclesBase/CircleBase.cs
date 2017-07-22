@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class CircleBase : MonoBehaviour {
 
-    protected int mass;
+    protected float mass;
     protected string type;
     protected GameObject prefabObject;
 
